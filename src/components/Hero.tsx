@@ -10,7 +10,7 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Transform Your Business with AI Tools
+        Your Business, Supercharged.
       </motion.h1>
       <motion.p
         className="max-w-2xl mx-auto text-lg text-gray-700 mb-8"
@@ -18,7 +18,7 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.8 }}
       >
-        Leveraging modern AI solutions with a vintage touch to create innovative strategies.
+        Smart AI Chatbots that never clock out - personalized automation for online shops, influencers, and local businesses.
       </motion.p>
       <motion.button
         className="bg-vintageGold text-white px-6 py-3 rounded-lg shadow hover:opacity-90"
@@ -30,7 +30,7 @@ const Hero = () => {
           if(cta) cta.scrollIntoView({ behavior: 'smooth' });
         }}
       >
-        Schedule Free Consultation
+        Reclaim Your Time. Let AI Handle Customer Chats—You’ve Got Bigger Things to Do.
       </motion.button>
     </section>
   );
