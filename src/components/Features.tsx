@@ -14,7 +14,7 @@ const Features = () => {
           Why Sidekick AI
         </motion.h2>
         <p className="text-white max-w-xl mx-auto mb-12">
-          Our platform seamlessly blends advanced AI with hands-on support to solve your SMB challenges.
+          Our platform seamlessly blends advanced AI with white glove support to save you time and scale your business.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <motion.div className="border border-gray-700 p-6 rounded-lg hover:shadow-lg transition" whileHover={{ scale: 1.05 }}>

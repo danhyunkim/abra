@@ -17,13 +17,13 @@ const Verticals = () => {
           <motion.div id="dtc" className="border border-gray-700 p-6 rounded-lg hover:shadow-lg transition" whileHover={{ scale: 1.05 }}>
             <h3 className="text-2xl font-heading font-bold text-metallicStart mb-2">Ecommerce</h3>
             <p className="text-white">
-              Enhance conversions with intelligent, on–demand support for your online store.
+              Reduce cart abandonment and boost conversion rates with real-time, intelligent responses to order and product inquiries.
             </p>
           </motion.div>
           <motion.div id="retail" className="border border-gray-700 p-6 rounded-lg hover:shadow-lg transition" whileHover={{ scale: 1.05 }}>
             <h3 className="text-2xl font-heading font-bold text-metallicStart mb-2">Brick-and-Mortar</h3>
             <p className="text-white">
-              Ensure prompt, around–the–clock responses to keep customers coming back.
+              Save hours on repititve customer inquiries with instant answers—whether it’s store hours, product availability, or appointment bookings. 
             </p>
           </motion.div>
           <motion.div id="influencer" className="border border-gray-700 p-6 rounded-lg hover:shadow-lg transition" whileHover={{ scale: 1.05 }}>

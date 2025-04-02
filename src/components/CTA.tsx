@@ -6,9 +6,9 @@ const CTA = () => {
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Add your API call or form submission logic here
+    // Insert your API call or submission logic here
     alert("Thank you! We'll schedule your free consultation shortly.");
-    setFormData({ name: '', email: '', business: '' });
+    setFormData({ name: '', email: '', company: '' });
   };
   
   return (
