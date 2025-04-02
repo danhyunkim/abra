@@ -2,4 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-/* You can add custom styles here if needed */
+/* Custom metallic shine animation for header text */
+@keyframes metallicShine {
+  0%, 100% {
+    text-shadow: 0 0 5px #C0C0C0, 0 0 10px #C0C0C0;
+  }
+  50% {
+    text-shadow: 0 0 15px #E0E0E0, 0 0 20px #E0E0E0;
+  }
+}
+
+.animate-shine {
+  animation: metallicShine 2s infinite alternate;
+}
+
+/* Mobile menu custom style */
+.mobile-menu {
+  background-color: rgba(18, 18, 18, 0.95);
+}

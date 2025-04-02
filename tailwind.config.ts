@@ -1,33 +1,38 @@
-import { defineConfig } from 'tailwindcss/helpers';
+import type { Config } from 'tailwindcss';
 
-export default defineConfig({
+const config: Config = {
+  darkMode: 'class',
   content: [
     "./index.html",
-    "./src/**/*.{ts,tsx}"
+    "./src/**/*.{ts,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        // Example vintage palette:
-        vintageGold: "#b8860b",
-        offWhite: "#faf8f5",
-        // You can add more custom colors for your vintage feel
+        darkBg: "#121212", // dark background
+        // Metallic gradient for headers (used in the shiny effect)
+        metallicStart: "#C0C0C0",
+        metallicEnd: "#E0E0E0",
+        // Gradient for CTA buttons (muted pastel)
+        ctaGradientFrom: "#a8dadc",
+        ctaGradientTo: "#457b9d",
       },
       fontFamily: {
-        // Example: use a serif font for a vintage touch.
-        display: ['"Playfair Display"', 'serif'],
-        body: ['Montserrat', 'sans-serif']
+        heading: ['"Nunito Sans"', 'sans-serif'],
+        body: ['"Open Sans"', 'sans-serif'],
       },
       keyframes: {
-        fadeIn: {
-          '0%': { opacity: 0, transform: 'translateY(20px)' },
-          '100%': { opacity: 1, transform: 'translateY(0)' }
-        }
+        metallicShine: {
+          '0%, 100%': { textShadow: '0 0 5px #C0C0C0, 0 0 10px #C0C0C0' },
+          '50%': { textShadow: '0 0 15px #E0E0E0, 0 0 20px #E0E0E0' },
+        },
       },
       animation: {
-        fadeIn: 'fadeIn 0.8s ease-out forwards'
-      }
-    }
+        shine: 'metallicShine 2s infinite alternate',
+      },
+    },
   },
-  plugins: []
-});
+  plugins: [],
+};
+
+export default config;
