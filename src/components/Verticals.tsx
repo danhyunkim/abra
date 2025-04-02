@@ -1,29 +1,37 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Verticals = () => {
   return (
-    <section id="verticals" className="py-12 bg-gray-50">
+    <section id="verticals" className="py-16 bg-[#181818]">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-display text-vintageGold mb-4">Tailored Solutions for Every Business</h2>
+        <motion.h2
+          className="text-3xl font-heading font-bold text-metallicStart mb-8"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          Tailored Solutions for Every Business
+        </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div id="dtc" className="border p-6 rounded-lg shadow hover:shadow-lg transition">
-            <h3 className="text-2xl font-bold mb-2">Ecommerce</h3>
-            <p className="text-gray-600">
+          <motion.div id="dtc" className="border border-gray-700 p-6 rounded-lg hover:shadow-lg transition" whileHover={{ scale: 1.05 }}>
+            <h3 className="text-2xl font-heading font-bold text-metallicStart mb-2">Ecommerce</h3>
+            <p className="text-white">
               Reduce cart abandonment and boost conversion rates with real-time, intelligent responses to order and product inquiries.
             </p>
-          </div>
-          <div id="retail" className="border p-6 rounded-lg shadow hover:shadow-lg transition">
-            <h3 className="text-2xl font-bold mb-2">Brick-and-Mortar</h3>
-            <p className="text-gray-600">
+          </motion.div>
+          <motion.div id="retail" className="border border-gray-700 p-6 rounded-lg hover:shadow-lg transition" whileHover={{ scale: 1.05 }}>
+            <h3 className="text-2xl font-heading font-bold text-metallicStart mb-2">Brick-and-Mortar</h3>
+            <p className="text-white">
               Save hours on repititve customer inquiries with instant answers—whether it’s store hours, product availability, or appointment bookings. 
             </p>
-          </div>
-          <div id="influencer" className="border p-6 rounded-lg shadow hover:shadow-lg transition">
-            <h3 className="text-2xl font-bold mb-2">Influencers</h3>
-            <p className="text-gray-600">
-              Scale your personal brand by automating direct messages and nurturing your community without losing your authentic touch.
+          </motion.div>
+          <motion.div id="influencer" className="border border-gray-700 p-6 rounded-lg hover:shadow-lg transition" whileHover={{ scale: 1.05 }}>
+            <h3 className="text-2xl font-heading font-bold text-metallicStart mb-2">Influencers</h3>
+            <p className="text-white">
+              Scale your personal brand without losing the authentic touch that your audience loves.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

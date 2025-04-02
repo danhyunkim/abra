@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const CTA = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', company: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', business: '' });
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -12,24 +12,24 @@ const CTA = () => {
   };
   
   return (
-    <section id="cta" className="py-12 bg-gradient-to-b from-white to-gray-50">
-      <div className="container mx-auto max-w-xl">
+    <section id="cta" className="py-16 bg-gradient-to-b from-[#1a1a1a] to-[#121212]">
+      <div className="container mx-auto max-w-xl text-center">
         <motion.h2
-          className="text-3xl font-display text-vintageGold text-center mb-4"
+          className="text-3xl font-heading font-bold text-metallicStart mb-4"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
         >
-          Meet Your AI Sidekick.
+          Meet your Sidekick
         </motion.h2>
-        <p className="text-center text-gray-700 mb-6">
-          Reliable conversations, happier customers, fewer headaches.
+        <p className="text-white mb-8">
+          Your AI assistant that works 24/7—capturing leads, answering questions, and booking customers—so you don’t have to stress.
         </p>
         <form onSubmit={handleSubmit} className="space-y-4">
           <input 
             type="text" 
             placeholder="Your Name" 
-            className="w-full border p-3 rounded"
+            className="w-full border border-gray-700 p-3 rounded bg-[#1e1e1e] text-white focus:outline-none focus:border-metallicStart"
             value={formData.name}
             onChange={e => setFormData({ ...formData, name: e.target.value })}
             required
@@ -37,21 +37,21 @@ const CTA = () => {
           <input 
             type="email" 
             placeholder="Email Address" 
-            className="w-full border p-3 rounded"
+            className="w-full border border-gray-700 p-3 rounded bg-[#1e1e1e] text-white focus:outline-none focus:border-metallicStart"
             value={formData.email}
             onChange={e => setFormData({ ...formData, email: e.target.value })}
             required
           />
           <input 
             type="text" 
-            placeholder="Business Name" 
-            className="w-full border p-3 rounded"
-            value={formData.company}
-            onChange={e => setFormData({ ...formData, company: e.target.value })}
+            placeholder="Company Name" 
+            className="w-full border border-gray-700 p-3 rounded bg-[#1e1e1e] text-white focus:outline-none focus:border-metallicStart"
+            value={formData.business}
+            onChange={e => setFormData({ ...formData, business: e.target.value })}
             required
           />
-          <button type="submit" className="w-full bg-vintageGold text-white px-6 py-3 rounded-lg shadow hover:opacity-90">
-            Grab Your Free AI Strategy Session
+          <button type="submit" className="w-full bg-gradient-to-r from-ctaGradientFrom to-ctaGradientTo text-darkBg px-6 py-3 rounded-lg hover:opacity-90 focus:outline-none">
+            Schedule Your Free AI Strategy Session
           </button>
         </form>
       </div>

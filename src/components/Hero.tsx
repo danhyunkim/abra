@@ -3,34 +3,35 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section id="hero" className="pt-20 pb-12 text-center bg-gradient-to-b from-offWhite to-white">
+    <section id="hero" className="pt-24 pb-16 text-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #121212, #000000)' }}>
       <motion.h1
-        className="text-4xl md:text-6xl font-display text-vintageGold mb-4"
-        initial={{ opacity: 0, y: 20 }}
+        className="text-4xl md:text-6xl font-heading font-extrabold mb-4 animate-shine"
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1 }}
+        style={{ color: "#C0C0C0" }}  // metallic header color
       >
         Your Business, Supercharged.
       </motion.h1>
       <motion.p
-        className="max-w-2xl mx-auto text-lg text-gray-700 mb-8"
-        initial={{ opacity: 0, y: 20 }}
+        className="max-w-2xl mx-auto text-lg font-body mb-8 text-white"
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3, duration: 0.8 }}
+        transition={{ delay: 0.5, duration: 1 }}
       >
-        Smart AI Chatbots that never clock out - personalized automation for online shops, influencers, and local businesses.
+        Smart AI Chatbots that never clock out—smart, simple, and uniquely you.
       </motion.p>
       <motion.button
-        className="bg-vintageGold text-white px-6 py-3 rounded-lg shadow hover:opacity-90"
+        className="bg-gradient-to-r from-ctaGradientFrom to-ctaGradientTo text-darkBg px-6 py-3 rounded-lg shadow hover:opacity-90 focus:outline-none"
         initial={{ scale: 0.95, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.6 }}
+        transition={{ delay: 0.8, duration: 0.6 }}
         onClick={() => {
           const cta = document.getElementById('cta');
           if(cta) cta.scrollIntoView({ behavior: 'smooth' });
         }}
       >
-        Reclaim Your Time. Let AI Handle Customer Chats—You’ve Got Bigger Things to Do.
+        Get Started Free
       </motion.button>
     </section>
   );
